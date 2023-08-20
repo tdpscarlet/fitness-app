@@ -1,0 +1,52 @@
+@use "../../assets/css/base.scss";
+
+.detail-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ex-detail {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 60px;
+}
+
+.detail-img {
+  width: 600px;
+}
+
+.detail-text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  > p > span {
+    text-transform: capitalize;
+  }
+}
+
+.datail-title {
+  font-size: 30px;
+  color: base.$dark-blue;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+}
+
+.loading {
+  margin-top: 60px;
+}
+
+@media screen and (max-width: 1150px) {
+  .detail-img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .ex-detail {
+    display: flex;
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,79 @@
+@use "../../assets/css/base.scss";
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.navBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 190px;
+  margin-top: 49px;
+}
+
+.logo {
+  cursor: pointer;
+}
+
+.nav-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.nav-item {
+  cursor: pointer;
+  text-align: center;
+}
+
+.active {
+  color: base.$primary;
+}
+
+.nav-btn {
+  border: 2px solid base.$dark-blue;
+  border-radius: 8px;
+  padding: 10px 16px;
+  color: base.$dark-blue;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.hamburger {
+  display: none;
+}
+
+@media screen and (max-width: 1150px) {
+  .navBar {
+    gap: 50px;
+    margin: 20px 10px 0 10px;
+  }
+
+  .logo {
+    width: 100px;
+  }
+
+  .nav-list {
+    gap: 16px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .nav-list,
+  .nav-btn {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .ham-item.active {
+    color: #ffffff;
+  }
+}

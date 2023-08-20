@@ -1,0 +1,139 @@
+@use "../../assets/css/base.scss";
+
+.banner {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 700px;
+}
+
+.banner-text {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 0;
+  top: 205px;
+  width: 461px;
+}
+
+.banner-title {
+  font-family: "Concert One";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 47px;
+  letter-spacing: 0.145em;
+  margin-bottom: 24px;
+  z-index: 2;
+}
+
+.banner-subtitle {
+  margin-top: 8px;
+  margin-bottom: 32px;
+  z-index: 2;
+}
+
+.banner-title.blue {
+  font-size: 60px;
+  color: base.$primary;
+}
+
+.banner-title.yellow {
+  font-size: 60px;
+  color: base.$secondary;
+}
+
+.text-behind {
+  position: absolute;
+  width: 514px;
+  height: 468px;
+  left: -300px;
+  top: 0;
+  font-weight: 700;
+  font-size: 120px;
+  line-height: 156px;
+  letter-spacing: 0.08em;
+  color: rgba(86, 177, 211, 0.1);
+  cursor: default;
+  z-index: 1;
+
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+.banner-btn {
+  padding: 12px 16px;
+  width: fit-content;
+  border: none;
+  border-radius: 8px;
+  background-color: base.$primary;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.banner-image {
+  position: absolute;
+  top: 0;
+  right: -150px;
+}
+
+@media screen and (max-width: 1150px) {
+  .banner {
+    height: 600px;
+    overflow: hidden;
+  }
+
+  .banner-text {
+    top: 100px;
+    margin-left: 20px;
+  }
+
+  .banner-title {
+    font-size: 40px;
+  }
+
+  .banner-title.blue,
+  .banner-title.yellow {
+    font-size: 50px;
+  }
+
+  .banner-subtitle {
+    font-size: 16px;
+  }
+
+  .banner-image {
+    width: 500px;
+    right: -50px;
+    top: 50px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .banner {
+    height: 500px;
+  }
+
+  .banner-text {
+    top: 50px;
+    width: 300px;
+  }
+  .banner-title {
+    font-size: 30px;
+  }
+
+  .banner-title.blue,
+  .banner-title.yellow {
+    font-size: 40px;
+  }
+
+  .banner-image {
+    display: none;
+  }
+}
